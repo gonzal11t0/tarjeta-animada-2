@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+.contenedor{
+    position: absolute;
+    width:100%;
+    display:grid;
+    grid-template-columns: 50% auto;
+    top: 25%;
+    left:17%;
+}
+h1 {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+.container {
+    font-size:1.2em;
+    padding-left:55px;
+    transition: all 1s ease 1s;
+    width:50%;
+}
+.container:hover .tarjeta {
+    transform: rotateY(180deg);
+}
+.tarjeta {
+    background: #474242;
+    height:450px;
+    transform-style:preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width:100%;
+    -webkit-animation: giro 2s 1;
+    animation: giro 1s 1;
+}
+.tarjeta p {
+    margin-bottom:25px;
+}
+.tarjeta .front,
+.tarjeta .back {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    font-size: 1.2em;
+    height: 100%;
+    padding:0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.tarjeta .back {
+    transform: rotateY( 180deg);
+}
+.tarjeta .back a {
+    padding: 0.3em 0.5em;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 1px;
+    font-size: 0.9em;
+    transition: all 0.2s ease 0s;
+}
+.tarjeta .back a:hover {
+    background: #fff;
+    color: #333;
+    text-shadow: 0 0 1px #333;
+}
+.container:nth-child(1) .tarjeta .back {
+    background: cornflowerblue;
+}
+.container:nth-child(2) .tarjeta .back {
+    background: yellowgreen;
+}
+.container:nth-child(2) .tarjeta {
+    -webkit-animation: giro 1.5s 1;
+    animation: giro 1.5s 1;
+}
+@-webkit-keyframes giro {
+    from {
+        transform: rotateY( 180deg);
+    }
+    to {
+        transform: rotateY( 0deg);
+    }
+}
+@keyframes giro {
+    from {
+        transform: rotateY( 180deg);
+    }
+    to {
+        transform: rotateY( 0deg);
+    }
+}

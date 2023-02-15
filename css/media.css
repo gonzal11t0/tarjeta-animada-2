@@ -1,0 +1,36 @@
+@media screen and (max-width:950px) {
+    .container {
+        font-size: 0.9rem;
+        margin-left: 2.8%;
+        margin-top: 3%;
+        width: 46%;
+    }
+    .card {
+        height: 285px;
+    }
+    .container:last-child {
+        margin-bottom: 3%;
+    }
+}
+@media screen and (min-width:292px)  and (max-width:575px) {
+    .contenedor{
+        position: absolute;
+        width:100%;
+        display:grid;
+        grid-template-columns: 50% ;
+        top:25%;
+        left:20%;
+    }
+    .container {
+        font-size:0.9rem;
+        margin-left:2.8%;
+        margin-top:40px;
+        width:90%;
+    }
+    .card {
+        height:360px;
+    }
+    .container:last-child {
+        margin-bottom:3%;
+    }
+}
